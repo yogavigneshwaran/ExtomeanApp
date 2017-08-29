@@ -8,6 +8,7 @@
     "start": "node app"
   },
   "dependencies": {
+    "@ngui/auto-complete": "^0.13.6",
     "bcryptjs": "*",
     "body-parser": "*",
     "cors": "*",

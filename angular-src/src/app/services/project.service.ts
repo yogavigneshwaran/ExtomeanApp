@@ -11,8 +11,8 @@ export class ProjectService {
   getProjects() {
     return this.http.get("http://localhost:3000/users/projects")
         .map(data => {
-            data.json();
-            return data.json();
+          data.json();
+          return data.json();
     });
    }
   }

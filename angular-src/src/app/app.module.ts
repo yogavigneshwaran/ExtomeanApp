@@ -5,6 +5,8 @@ import { RouterModule, Routes} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { Ng2CompleterModule } from "ng2-completer";
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -19,7 +21,7 @@ import { ProjectComponent } from './components/project/project.component';
 
 
 const appRoutes: Routes = [
-  {path: '', component: ProjectComponent},
+  {path: 'project', component: ProjectComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'dashboard', component: DashboardComponent},
@@ -42,7 +44,9 @@ const appRoutes: Routes = [
     HttpClientModule,
     HttpModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    Ng2CompleterModule,
   ],
   providers: [ProjectService],
   bootstrap: [AppComponent]

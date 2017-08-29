@@ -1,13 +1,5 @@
-<md-card>
-  <div>EXTO</div>
-  <md-select ng-model="drink" placeholder="Drink" class="md-no-underline">
-          <md-option value="water">Water</md-option>
-          <md-option value="juice">Juice</md-option>
-          <md-option value="milk">Milk</md-option>
-          <md-option value="wine">Wine</md-option>
-          <md-option value="mead">Mead</md-option>
-        </md-select>
+<img class="logo" src="assets/images/extoLogo.png" alt="image">
+<div class="search-panel">
 
-
-
-</md-card>
+  <ng2-completer [(ngModel)]="searchStr" [datasource]="projectNames" [minSearchLength]="0" placeholder="Search Project"></ng2-completer>
+</div>
