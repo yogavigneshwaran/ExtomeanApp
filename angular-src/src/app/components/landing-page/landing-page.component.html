@@ -1,0 +1,6 @@
+<img class="logo" src="assets/images/extoLogo.png" alt="image">
+<div class="search-panel">
+  <ng2-completer [(ngModel)]="searchStr" [datasource]="projectNames" [minSearchLength]="0"
+    placeholder="Search Project" openOnFocus="true" (selected)="selected($event)">
+  </ng2-completer>
+</div>

@@ -9,19 +9,10 @@ import { CompleterService, CompleterData } from 'ng2-completer';
 })
 export class ProjectComponent implements OnInit {
 
-  protected searchStr: string;
-  protected dataService: CompleterData;
-  protected projectNames = [];
-
   constructor(private projectService: ProjectService, private completerService: CompleterService) {
           //this.dataService = completerService.local(this.searchData, 'color', 'color');
     }
 
   ngOnInit() {
-  this.projectService.getProjects().subscribe(data => {
-    for (let obj of data.msg) {
-      this.projectNames.push(obj.project.name);
-    }
-  });
 }
 }

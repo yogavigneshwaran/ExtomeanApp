@@ -17,11 +17,14 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ProjectService} from './services/project.service';
 import { ProjectComponent } from './components/project/project.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { ProjectInfoComponent } from './components/project-info/project-info.component';
 
 
 
 const appRoutes: Routes = [
-  {path: 'project', component: ProjectComponent},
+  {path: '', component: LandingPageComponent},
+  {path: 'projectInfo', component: ProjectInfoComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'dashboard', component: DashboardComponent},
@@ -36,7 +39,9 @@ const appRoutes: Routes = [
     HomeComponent,
     DashboardComponent,
     ProfileComponent,
-    ProjectComponent
+    ProjectComponent,
+    LandingPageComponent,
+    ProjectInfoComponent
   ],
   imports: [
     BrowserModule,

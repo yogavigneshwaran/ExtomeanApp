@@ -23,3 +23,13 @@ const User = module.exports =  mongoose.model('User', userSchema);
 module.exports.getAllProjects = function(callBack) {
   User.find({}, 'project',callBack);
 }
+
+module.exports.updateUserProjectDetails = function(callBack, currentName, project) {
+  Model.findOne({ name: currentName }, function (err, doc){
+  doc.name = project.name;
+  doc.location = project.description;
+  doc.location = project.location;
+  doc.visits.$inc();
+  doc.save();
+});
+}
